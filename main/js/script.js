@@ -64,7 +64,7 @@ console.log(thief.age);
 
 // array
 //                0       1        2      3   4   5
-const colors = ["red", "black", "green", 10, [], {}];
+const colors = ["red", "black", "green", 10, [], {}]; // []---massivlarda har doim sanoq 0 dan boshlanadi
 console.log(colors[0]);
 
 //----------------------------------------------------------------------------------------------------------------
