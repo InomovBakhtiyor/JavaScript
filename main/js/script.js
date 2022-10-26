@@ -1,3 +1,5 @@
+/*
+
 // LESSON---1
 
 alert("Bu alert");
@@ -19,3 +21,9 @@ console.log(person);
 // Old versions
 
 var clientName = "Bakhtiyor";
+
+*/
+
+// LESSON-2 
+
+"use strict"; // qat'iy rejim
