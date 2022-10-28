@@ -97,3 +97,15 @@ console.log(favouriteColor);
 */
 
 //----------------------------------------------------------------------------------------------------------------
+/*
+// LESSON-5
+
+const channel = prompt("What's your favourite youtuber");
+console.log(`https://youtube.com/${channel}`);
+
+const user = "Bakhtiyor";
+const job = "JavaScript developer";
+console.log(`User name is ${user}, he is ${job}`);
+*/
+
+//----------------------------------------------------------------------------------------------------------------
