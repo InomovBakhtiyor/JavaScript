@@ -109,3 +109,48 @@ console.log(`User name is ${user}, he is ${job}`);
 */
 
 //----------------------------------------------------------------------------------------------------------------
+
+/*
+// LESSON-6
+
+console.log(6 + +"9");
+
+// incr => ++, decr => --
+
+let incr = 10;
+let decr = 10;
+
+console.log(incr++);
+console.log(decr--);
+
+console.log(incr++);
+console.log(decr--);
+
+console.log(incr);
+console.log(decr);
+
+// % Ani Bga bo'lganda qoladigan qoldiqni aniqlab beradi
+console.log(10 % 3);
+
+// == tenglik belgisi bu faqat qiymat bilan solishtiradi
+// === tenglik belgisi bu qimay va ma'lumot turi bilan slishtiradi
+console.log(5 * 5 == 25);
+console.log(5 * 5 === "25");
+
+// && = va, || = yoki, ! = inkor
+const isAge = true;
+const isClose = true;
+const isChecked = false;
+
+console.log(isAge && isClose && !isChecked);
+
+console.log(2 + 2 * 2 = 6);
+console.log(2 + 2 * 2 != 6);
+console.log(2 + 2 * 2 == 6);
+console.log(2 + 2 * 2 !== 6);
+console.log(2 + 2 * 2 == "6");
+console.log(2 + 2 * 2 !== "6");
+
+*/
+
+//----------------------------------------------------------------------------------------------------------------
