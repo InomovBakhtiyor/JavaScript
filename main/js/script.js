@@ -154,3 +154,34 @@ console.log(2 + 2 * 2 !== "6");
 */
 
 //----------------------------------------------------------------------------------------------------------------
+
+// LESSON-7
+
+const namberOfSeries = prompt("Nechta serial ko'rdingiz?", "");
+
+const seriesDB = {
+    count: namberOfSeries,
+    series: {},
+    actors: {},
+    genres: [],
+    private: false,
+};
+
+const a = prompt("Oxirgi ko'rgan serialingiz"),
+   b = prompt("Nechi baho berasiz?"),
+   c = prompt("Oxirgi ko'rgan serialingiz"),
+   d = prompt("Nechi baho berasiz?");
+
+seriesDB.series[a] = b;
+seriesDB.series[c] = d;
+
+const theif = {
+    jacket: "Black",
+};
+
+const property = "age",
+   value = 30;
+
+theif[property] = value;
+
+console.log(theif);
