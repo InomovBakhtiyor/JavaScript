@@ -155,6 +155,7 @@ console.log(2 + 2 * 2 !== "6");
 
 //----------------------------------------------------------------------------------------------------------------
 
+/*
 // LESSON-7
 
 const namberOfSeries = prompt("Nechta serial ko'rdingiz?", "");
@@ -185,3 +186,56 @@ const property = "age",
 theif[property] = value;
 
 console.log(theif);
+*/
+
+//----------------------------------------------------------------------------------------------------------------
+
+/*
+// LESSON-8
+
+
+const age = +prompt("How old are you?", "");
+
+if (age >18) {
+    console.log("Welcome");
+} else {
+    console.log("No Entry");
+}
+
+// tepadagi shart bilan pastdagisi bir xil
+
+age>18 ? console.log("Horror films") : console.log("Carton");
+
+
+const age = +prompt("How old are you?", "");
+
+if (age > 25) {
+    console.log("Horror films");
+} else if (age > 18) {
+    console.log("Boyevik films");
+} else {
+    console.log("Cartons");
+}
+
+// switch case => har doim qat'iy rejimda ishlaydi
+
+const color = "red";
+
+switch (color) {
+    case "red":
+        console.log("Stop");
+        break;
+    case "green":
+        console.log("Goo");
+        break;
+    case "yellow":
+        console.log("Slowly");
+        break;
+    default:
+        console.log("Traffic jam");
+        break;
+}
+
+*/
+
+//----------------------------------------------------------------------------------------------------------------
