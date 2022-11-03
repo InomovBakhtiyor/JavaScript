@@ -239,3 +239,31 @@ switch (color) {
 */
 
 //----------------------------------------------------------------------------------------------------------------
+
+// LESSON-9
+
+let startNum = 1;
+
+// First
+while (startNum <= 20) {
+    console.log(startNum);
+    startNum++;
+}
+
+// Second
+do {
+    console.log(startNum);
+    startNum++;
+} while (startNum <= 20);
+
+// Third
+for (let i = 1; i <= 20; i++) {
+    console.log(i);
+}
+
+for (let i = 1; i <= 20; i++) {
+    if (i === 8) {
+        break;
+    }
+    console.log(i);
+}
