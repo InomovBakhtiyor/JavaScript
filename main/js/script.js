@@ -240,6 +240,7 @@ switch (color) {
 
 //----------------------------------------------------------------------------------------------------------------
 
+/*
 // LESSON-9
 
 let startNum = 1;
@@ -267,3 +268,43 @@ for (let i = 1; i <= 20; i++) {
     }
     console.log(i);
 }
+*/
+
+//----------------------------------------------------------------------------------------------------------------
+
+// LESSON-10 >>>>>>>>UYGA VAZIFA
+
+const namberOfSeries = prompt("Nechta serial ko'rdingiz?", "");
+
+const seriesDB = {
+    count: namberOfSeries,
+    series: {},
+    actors: {},
+    genres: [],
+    private: false,
+};
+
+for (let i = 0; i < 2; i++) {
+    const a = prompt("Oxirgi ko'rgan serialingiz"),
+          b = prompt("Nechi baho berasiz?");  
+          
+    if (a != null && b != null && a != "" && b != "") {
+        seriesDB.series[a] = b;
+        console.log("done");
+    } else {
+        console.log("error");
+        i--;
+    }
+}
+
+if (seriesDB.count < 5) {
+    console.log("Siz kam serial ko'ripsiz")
+} else if (seriesDB.count >= 5 && seriesDB.count < 10) {
+    console.log("Siz klassik tomoshabin ekansiz");
+} else if (seriesDB.count >= 10) {
+    console.log("siz serialchi zvezda ekansiz");
+} else {
+    console.log("Error");
+}
+
+console.log(seriesDB);
