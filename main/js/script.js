@@ -26,7 +26,7 @@ var clientName = "Bakhtiyor";
 //----------------------------------------------------------------------------------------------------------------
 // LESSON-2 
 
-"use strict"; // qat'iy rejim
+// "use strict"; // qat'iy rejim
 
 //----------------------------------------------------------------------------------------------------------------
 
@@ -272,6 +272,7 @@ for (let i = 1; i <= 20; i++) {
 
 //----------------------------------------------------------------------------------------------------------------
 
+/*
 // LESSON-10 >>>>>>>>UYGA VAZIFA
 
 const namberOfSeries = prompt("Nechta serial ko'rdingiz?", "");
@@ -308,3 +309,77 @@ if (seriesDB.count < 5) {
 }
 
 console.log(seriesDB);
+*/
+
+//----------------------------------------------------------------------------------------------------------------
+
+// LESSON-11
+
+"use strict";
+// Function declaration
+function calc(a, b) {
+    return a + b;
+}
+
+const sumOfAandB = calc(10, 5);
+console.log(sumOfAandB);
+
+// Function expression
+const logger = function () {
+    console.log("Hello world");
+};
+
+logger();
+
+// Arrow function
+const calculator = (a, b) => a + b;
+
+console.log(calculator(10, 5));
+
+//------------
+function example() {
+    console.log("Hello world");
+}
+
+example();
+
+//-----------
+function calc(a, b) {
+    console.log(a + b);
+}
+
+calc(10, 9);
+calc(8, 7);
+
+//------------
+function sayMyName(name,surname) {
+    console.log(`My name is ${name} ${surname}`);
+}
+
+sayMyName("Bakhtiyor", "Inomov");
+
+//---------------
+//Local verible
+let age = 30;
+
+function sayMyName(name,surname) {
+    let age = 20;
+    console.log(`My name is ${name} ${surname}`);
+    console.log(age);
+}
+
+sayMyName("Bakhtiyor", "Inomov");
+console.log(age);
+
+//------------
+//Global verible
+let ageGlobal = 30;
+
+function sayMyName(name,surname) {
+    ageGlobal = 20;
+    console.log(`My name is ${name} ${surname}`);
+    console.log(ageGlobal);
+}
+
+sayMyName("Bakhtiyor", "Inomov");
+console.log(ageGlobal);
