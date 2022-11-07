@@ -313,6 +313,7 @@ console.log(seriesDB);
 
 //----------------------------------------------------------------------------------------------------------------
 
+/*
 // LESSON-11
 
 "use strict";
@@ -383,3 +384,43 @@ function sayMyName(name,surname) {
 
 sayMyName("Bakhtiyor", "Inomov");
 console.log(ageGlobal);
+*/
+
+//----------------------------------------------------------------------------------------------------------------
+
+// LESSON-12
+
+"use strict";
+
+// length[proparty]---Uzunligi yoki harf va raqamlarni nechtaligini aniqlaydi
+const user = "Bakhtiyor";
+console.log(user.length);
+console.log(user[2]);
+console.log(user.toUpperCase());
+console.log(user.toLowerCase());
+
+const upperCaseUser = user.toUpperCase();
+const lowerCaseUser = user.toLowerCase();
+
+console.log(upperCaseUser);
+console.log(lowerCaseUser);
+console.log(user);
+
+const arr = [1, 2, 3, 4];
+console.log(arr.length);
+
+//--------
+const greeting = "Hello world";
+
+console.log(greeting.indexOf("r"));
+console.log(greeting.slice(6, 11)); //minus qiymat qabul qiladi
+console.log(greeting.substring(0, 5)); //minus qiymat qabul qilmaydi
+console.log(greeting.substr(6, 5));
+
+// ------ Math method -----
+const num = 8.7;
+console.log(Math.round(num));
+
+const borderWidth = "13.8px";
+console.log(parseInt(borderWidth));
+console.log(parseFloat(borderWidth));
