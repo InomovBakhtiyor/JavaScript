@@ -431,6 +431,8 @@ console.log(parseFloat(borderWidth));
 
 //----------------------------------------------------------------------------------------------------------------
 
+/*
+
 // LESSON-13  Uyga vazifa
 
 let namberOfSeries;
@@ -507,3 +509,35 @@ function writeGenres() {
 }
 
 writeGenres();
+
+*/
+
+//----------------------------------------------------------------------------------------------------------------
+
+// LESSON-14-----callback
+"use strict";
+
+function edu(subject, callback) {
+    console.log(`I wanna teach ${subject}`);
+    callback();
+}
+
+edu("JavaScript", function() {
+    console.log("That's great");
+});
+
+//------
+function first(cb) {
+    //code
+    setTimeout(() => {
+        console.log(1);
+        cb();
+    }, 1000);
+}
+
+function second()  {
+    //code
+    console.log(2);
+}
+
+first(second);
