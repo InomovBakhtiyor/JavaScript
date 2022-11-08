@@ -388,6 +388,8 @@ console.log(ageGlobal);
 
 //----------------------------------------------------------------------------------------------------------------
 
+/*
+
 // LESSON-12
 
 "use strict";
@@ -424,3 +426,84 @@ console.log(Math.round(num));
 const borderWidth = "13.8px";
 console.log(parseInt(borderWidth));
 console.log(parseFloat(borderWidth));
+
+*/
+
+//----------------------------------------------------------------------------------------------------------------
+
+// LESSON-13  Uyga vazifa
+
+let namberOfSeries;
+
+function startApp() {
+    namberOfSeries = +prompt("Nechta serial ko'rdingiz?", "");
+
+    while(namberOfSeries == "" || 
+          namberOfSeries == null || 
+          isNaN(namberOfSeries)) {
+                          namberOfSeries = +prompt("Nechta serial ko'rdingiz?", "");
+    }
+}
+
+startApp();
+
+const seriesDB = {
+    count: namberOfSeries,
+    series: {},
+    actors: {},
+    genres: [],
+    private: false,
+};
+
+function rememberMySeries() {
+    for (let i = 0; i < 2; i++) {
+        const a = prompt("Oxirgi ko'rgan serialingiz"),
+              b = prompt("Nechi baho berasiz?");  
+              
+        if (a != null && b != null && a != "" && b != "") {
+            seriesDB.series[a] = b;
+            console.log("done");
+        } else {
+            console.log("error");
+            i--;
+        }
+    }
+}
+
+rememberMySeries();
+
+function detectLevelSeries() {
+    if (seriesDB.count < 5) {
+        console.log("Siz kam serial ko'ripsiz");
+    } else if (seriesDB.count >= 5 && seriesDB.count < 10) {
+        console.log("Siz klassik tomoshabin ekansiz");
+    } else if (seriesDB.count >= 10) {
+        console.log("siz serialchi zvezda ekansiz");
+    } else {
+        console.log("Error");
+    }
+}
+
+detectLevelSeries();
+
+console.log(seriesDB);
+
+//-----
+
+function showDb(hidden) {
+    if(!hidden) {
+        console.log(seriesDB);
+    }
+}
+
+showDb(seriesDB.private);
+
+
+function writeGenres() {
+    for (let i = 0; i <= 3; i++) {
+        const genre = prompt(`Yaxshi ko'rgan janringiz? ${i+1}`);
+        seriesDB.genres[i] = genre;
+    }
+}
+
+writeGenres();
