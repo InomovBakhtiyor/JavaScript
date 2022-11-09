@@ -514,6 +514,8 @@ writeGenres();
 
 //----------------------------------------------------------------------------------------------------------------
 
+/*
+
 // LESSON-14-----callback
 "use strict";
 
@@ -541,3 +543,75 @@ function second()  {
 }
 
 first(second);
+
+*/
+
+//----------------------------------------------------------------------------------------------------------------
+
+// LESSON-15-----Object. Destruptizatsiya
+"use strict";
+
+const theif = {
+    jacket: "black",
+    height: 1.7,
+    colors: {
+        hair: "gray",
+        style: "curley",
+    },
+    howOut: function() {
+        console.log("Fast with help doors");
+    },
+};
+
+theif.howOut();
+
+const {hair, style} = theif.colors;
+console.log(hair);
+console.log(style);
+
+// console.log(theif.height);
+
+// delete theif.jacket;
+
+// console.log(theif);
+
+console.log(Object.keys(theif).length);
+
+for (let key in theif) {
+    if (typeof theif[key] === "object") {
+        for (let i in theif[key]) {
+            console.log(`Property ${i} has value ${theif[key][i]}`);
+        }
+    } else {
+        console.log(`Property ${key} has value ${theif[key]}`);
+    }
+}
+
+// Qisqa topshiriq
+const friendName = {
+    bir: "Abdullo",
+    ikki: "Shoxrux",
+    uch: "Abbos",
+    tort: "Murod",
+    besh: {
+        beshVaBir: "Laziz",
+        beshVaIkki: "Shukurullo",
+        beshVaUch: "Izzat",
+    },
+    howLevel: function() {
+        console.log("Best friends");
+    },
+};
+
+friendName.howLevel();
+
+console.log(friendName.bir);
+console.log(friendName.ikki);
+console.log(friendName.uch);
+console.log(friendName.tort);
+console.log(friendName.besh);
+
+const {beshVaBir, beshVaIkki, beshVaUch} = friendName.besh;
+console.log(beshVaBir);
+console.log(beshVaIkki);
+console.log(beshVaUch);
