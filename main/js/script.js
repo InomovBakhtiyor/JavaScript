@@ -676,6 +676,7 @@ function compareFn(a, b) {        // function(compareFn) funksiya bilan (a, b) =
 
 //----------------------------------------------------------------------------------------------------------------
 
+/*
 // LESSON-16   -----Clonlash(nusxalash, nusxa olish), ES6
 
 'use strict';
@@ -699,18 +700,16 @@ console.log(isArray);
 
 //---------
 
-/*
-const number = {
-    x: 10,
-    y: 5,
-};
+// const number = {
+//     x: 10,
+//     y: 5,
+// };
 
-const newNumber = number;      // havola
-newNumber.x = 15;
+// const newNumber = number;      // havola
+// newNumber.x = 15;
 
-console.log(number);
-console.log(newNumber);
-*/
+// console.log(number);
+// console.log(newNumber);
 
 //----
 
@@ -773,3 +772,38 @@ const manCity = ['Mahrez'];
 
 const mixPlayer = [...liverpool, ...manCity];
 console.log(mixPlayer);
+
+*/
+
+//----------------------------------------------------------------------------------------------------------------
+
+// LESSON-17   SPREAD(aylantirish) operatori
+
+'use strict';
+
+const raqam = {
+    x: 10,
+    y: 5,
+};
+
+const newNumbers = {...raqam};
+
+console.log(raqam);
+console.log(newNumbers);
+
+//--------
+
+const arr = ['x', 'y'];
+const newArr = [...arr];
+
+console.log(newArr);
+
+//-----
+
+const calc = [3, 5, 7];
+
+function logger(x, y, z) {
+    console.log(x + y + z);
+}
+
+logger(...calc);
