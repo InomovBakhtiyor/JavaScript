@@ -548,6 +548,8 @@ first(second);
 
 //----------------------------------------------------------------------------------------------------------------
 
+/*
+
 // LESSON-15-----Object. Destruptizatsiya
 "use strict";
 
@@ -615,3 +617,56 @@ const {beshVaBir, beshVaIkki, beshVaUch} = friendName.besh;
 console.log(beshVaBir);
 console.log(beshVaIkki);
 console.log(beshVaUch);
+
+*/
+
+//----------------------------------------------------------------------------------------------------------------
+
+// LESSON-16   -----Masssivlar
+
+const arr = [1, 2, 3, 4, 5, 6];
+
+// lenght---ohirgi obyektning indeksidan kelib chiqib ohirgi elementning indeksi 1 ni qo'shib natija chiqarib beradi
+arr[99] = 0;
+console.log(arr.length);
+
+arr.forEach(function(item, index, arr) {
+    console.log(`${index}: ${item} into arr ${arr}`);
+});
+
+console.log(arr);
+
+arr.pop();     // pop---metodi massivning ohirgi elementini olib tashlaydi
+arr.push(7);   // push---metodi massivning ohiriga element qo'shadi
+
+// shift va unshift metodlaridan deyarli foydalanilmaydi va foydalanishni tafsiyaham qilishmaydi
+arr.shift();     //shift---metodi massivning boshidagi elementni olib tashlaydi
+arr.unshift(0);  //shift---metodi massivning boshiga element qo'shadi
+
+console.log(arr);
+
+// for in asosan objectlar bilan ishlaydi
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
+
+// for of asosan massivlar bilan ishlaydi
+for (let velue of arr) {   
+    console.log(velue);
+}
+
+// array dan maasivga massivdan arrayga o'tkazish
+const movies = prompt("What's your favourite movies", "");
+const userMovies = movies.split(", ");          // array dan maasivga o'tkazish
+userMovies.sort();                              // alfabet tarzida tartiblab beradi
+console.log(userMovies.join("- "));             // massivdan arrayga o'tkazish
+
+//-------
+const arr1 = [13, 12, 25, 33, 1, 5, 3];
+arr1.sort((a, b) => a - b);       // sort()---ichiga funksiya yozilmagan holda faqat 1-da turgan raqamlarga qarab
+                                                                                 // solishtiradi
+console.log(arr1);
+
+function compareFn(a, b) {        // function(compareFn) funksiya bilan (a, b) => a - b   bir xildir
+    return a - b;
+}
