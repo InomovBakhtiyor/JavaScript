@@ -622,6 +622,7 @@ console.log(beshVaUch);
 
 //----------------------------------------------------------------------------------------------------------------
 
+/*
 // LESSON-16   -----Masssivlar
 
 const arr = [1, 2, 3, 4, 5, 6];
@@ -670,3 +671,105 @@ console.log(arr1);
 function compareFn(a, b) {        // function(compareFn) funksiya bilan (a, b) => a - b   bir xildir
     return a - b;
 }
+
+*/
+
+//----------------------------------------------------------------------------------------------------------------
+
+// LESSON-16   -----Clonlash(nusxalash, nusxa olish), ES6
+
+'use strict';
+
+let x = 10;
+let y = x;
+
+y = y + 5;
+
+console.log(x);
+console.log(y);
+
+
+let isMarried = false;
+let isArray = isMarried;
+
+isArray = true;
+
+console.log(isMarried);
+console.log(isArray);
+
+//---------
+
+/*
+const number = {
+    x: 10,
+    y: 5,
+};
+
+const newNumber = number;      // havola
+newNumber.x = 15;
+
+console.log(number);
+console.log(newNumber);
+*/
+
+//----
+
+function nusxaObj(obj) {
+    let objNusxa = {};
+
+    for (let key in obj) {
+        objNusxa[key] = obj[key];
+    }
+
+    return objNusxa;
+} 
+
+const numbers = {
+    x: 10,
+    y: 5,
+    z: {
+        a: 1,
+        b: 2,
+    },
+};
+
+const newNumbers = nusxaObj(numbers);
+
+newNumbers.x = 15;
+newNumbers.z.a = 10;
+
+console.log(numbers);
+console.log(newNumbers);
+
+//-----
+
+const numberss = {
+    x: 10,
+    y: 5,
+};
+
+const addNumber = {
+    z: 15,
+};
+
+const allNumbers = Object.assign(numberss, addNumber);
+console.log(allNumbers);
+
+//-------
+
+const arr2 = [1, 2, 3];
+const number = arr2.slice();
+
+number[1] = 'Bakhtiyor';
+
+console.log(arr2);
+console.log(number);
+
+//------
+// SPREAD operatiri massivni yangi massivga aylantirib beradi
+
+const liverpool = ['Salah', 'MAne'];
+const manCity = ['Mahrez'];
+
+const mixPlayer = [...liverpool, ...manCity];
+console.log(mixPlayer);
