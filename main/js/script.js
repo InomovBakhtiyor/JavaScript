@@ -777,6 +777,7 @@ console.log(mixPlayer);
 
 //----------------------------------------------------------------------------------------------------------------
 
+/*
 // LESSON-17   SPREAD(aylantirish) operatori
 
 'use strict';
@@ -807,3 +808,30 @@ function logger(x, y, z) {
 }
 
 logger(...calc);
+
+*/
+
+//----------------------------------------------------------------------------------------------------------------
+
+// LESSON-18       OOP asoslari (Obyektga yo'naltirilgan dasturlash)
+
+'use strict';
+
+const car = {
+    motor: 'X',
+    color: 'red',
+    isAirbag: true,
+    isSpeed: function () {
+        console.log(320);
+    },
+};
+
+const gm = {
+    isAirbag: false,
+};
+
+Object.setPrototypeOf(gm, car);
+console.log(gm);
+
+const bmw = Object.create(car);
+console.log(bmw);
