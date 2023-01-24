@@ -898,15 +898,28 @@ const seriesDB = {
         }
     },
     writeGenres: function () {
-        for (let i = 0; i < 3; i++) {
-            const genre = prompt(`Yaxshi ko'rgan janringiz? ${i+1}`, '');
-            if (genre === '' || genre === null) {
-                console.log("Siz noto'g'ri ma'lumot kiritdingiz!");
-                i--;
-            } else {
-                seriesDB.genres[i] = genre;
-            }
-            seriesDB.genres[i] = genre;
-        }
+        // for (let i = 0; i < 3; i++) {
+        //     const genre = prompt(`Yaxshi ko'rgan janringiz? ${i+1}`, '');
+        //     if (genre ==='' || genre === null) {
+        //         console.log("Siz noto'g'ri ma'lumot kiritdingiz!");
+        //         i--;
+        //     } else {
+        //         seriesDB.genres[i] = genre;
+        //     }
+        // }             // buning o'rniga pastdagi funksiya ham bir xil vazifani bajaradi
+
+        let genres = prompt("Yaxshi ko'rgan janringizni vergul yordamida yozing!!!").toLowerCase();  //toLowerCase()--- harflarni kichik harflarga o'girib beradi
+        
+        if (genres ==='' || genres === null) {
+                    console.log("Siz noto'g'ri ma'lumot kiritdingiz!");
+                    i--;
+                } else {
+                    seriesDB.genres = genres.split(`, `);
+                    seriesDB.genres.sort();
+                }
+
+        seriesDB.genres.forEach((item, idx) => {
+            console.log(`Yaxshi ko'rgan janringiz ${idx + 1} - nomi ${item}`);
+        });
     },
 };
