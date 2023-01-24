@@ -842,6 +842,8 @@ console.log(bmw);
 
 //----------------------------------------------------------------------------------------------------------------
 
+/*
+
 // LESSON-20       Amaliyot(uyga vazifa) OOP
 'use strict';
 
@@ -908,8 +910,9 @@ const seriesDB = {
         //     }
         // }             // buning o'rniga pastdagi funksiya ham bir xil vazifani bajaradi
 
-        let genres = prompt("Yaxshi ko'rgan janringizni vergul yordamida yozing!!!").toLowerCase();  //toLowerCase()--- harflarni kichik harflarga o'girib beradi
-        
+        let genres = prompt("Yaxshi ko'rgan janringizni vergul yordamida yozing!!!").toLowerCase();  
+                   //toLowerCase()--- harflarni kichik harflarga o'girib beradi
+
         if (genres ==='' || genres === null) {
                     console.log("Siz noto'g'ri ma'lumot kiritdingiz!");
                     i--;
@@ -923,3 +926,53 @@ const seriesDB = {
         });
     },
 };
+
+*/
+
+//----------------------------------------------------------------------------------------------------------------
+
+// LESSON-21   Dynamic typing
+
+'use strict';
+
+// to string
+// 1-)
+console.log(typeof String(4));
+
+// 2-)
+console.log(typeof ('samar' + 21));
+
+const youtubeChannel = 10;
+console.log('youtube.com/channel/' + youtubeChannel);
+
+// to number
+// 1-)
+console.log(typeof Number('4'));
+
+// 2-)
+console.log(typeof +'5');
+
+//3-)
+console.log(typeof parseInt('15'));
+
+// to boolean
+// 0, "", null, undefined, NaN  => har doim false
+
+// 1-)
+let age = 0;
+
+if (age) {
+    console.log('g');
+}
+
+age = 18;
+
+if (age) {
+    console.log('g');
+}
+
+// 2-)
+console.log(typeof Boolean('4'));
+
+//3-)
+console.log(typeof !!'4');
