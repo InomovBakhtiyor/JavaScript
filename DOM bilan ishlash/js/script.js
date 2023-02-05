@@ -29,6 +29,7 @@ hearts.forEach((item) => {
 
 */
 
+/*
 //----------------------------------------------------------------------------------------------------------------
 
 // LESSON-23   Metodlar bilan ishlash
@@ -40,6 +41,7 @@ const buttons = document.querySelectorAll('button');
 const circles = document.querySelectorAll('.circle');
 const circle = document.querySelector('.circle');
 const hearts = document.querySelectorAll('.heart');
+const circleWrapper = document.querySelector('.circle__wrapper');
 
 // box.style.backgroundColor = 'red';
 // box.style.height = '100px';
@@ -67,4 +69,22 @@ document.body.append(btn);
 
 const myCircle = document.createElement('div');
 myCircle.classList.add('circle');
-circleWrapper   .append(myCircle);
+// circleWrapper.append(myCircle);
+// circleWrapper.before(myCircle);
+// circleWrapper.after(myCircle);
+// circles[0].after(myCircle);
+// circles[1].remove(myCircle);
+// circles[1].replaceWith(myCircle);
+// circleWrapper.append(myCircle);
+// myCircle.innerHTML = '<pre>E</pre>';
+// myCircle.textContent = 'E';
+
+circleWrapper.insertAdjacentHTML('beforeend', '<pre>E</pre>');
+
+*/
+
+//----------------------------------------------------------------------------------------------------------------
+
+// LESSON-24   DOM [uyga vazifa] 
+
+'use strict';
