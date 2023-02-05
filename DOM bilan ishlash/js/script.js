@@ -82,9 +82,3 @@ myCircle.classList.add('circle');
 circleWrapper.insertAdjacentHTML('beforeend', '<pre>E</pre>');
 
 */
-
-//----------------------------------------------------------------------------------------------------------------
-
-// LESSON-24   DOM [uyga vazifa] 
-
-'use strict';
